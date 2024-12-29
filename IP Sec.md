@@ -82,7 +82,7 @@ I campi dell'header ESP sono:
 - **Next Header** Specifica il tipo di contenuto in Payload Data.
 - **Authentication Data** Campo opzionale e di dimensione variabile (deve essere comunque una dimensione multipla di 32), contiene un integrity check value calcolato su tutti i campi meno Authentication Data.
 
-
+![[Pasted image 20241229110807.png]]
 
 ### Gestione delle chiavi in IP Sec
 In IP Sec due applicazioni che vogliono comunicare hanno bisogno di due Security Association, ogni SA ha bisogno di una chiave di cifratura ed una di Autenticazione, pertanto:
