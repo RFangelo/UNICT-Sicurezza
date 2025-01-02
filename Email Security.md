@@ -76,4 +76,4 @@ PGP utilizza dei valori interni per gestire e rappresentare il livello di fiduci
 	Indica quanto PGP considera affidabile la corrispondenza tra un ID utente e una chiave pubblica specifica. È un attributo derivato dalle firme e dai valori di OWNERTRUST. Più una chiave è firmata da utenti di cui ti fidi (magari ad alto OWNERTRUST), più la sua legittimità sarà elevata. Questa legittimità è un valore che PGP calcola automaticamente, in base a come le chiavi si firmano tra loro e ai livelli di trust da te assegnati.
 
 
-
+# S/MIME
