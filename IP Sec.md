@@ -12,7 +12,7 @@ I vantaggi che si hanno dall'utilizzo di IP Sec sono i seguenti:
 
 
 ### Security Associations
-Un concetto chiave nei meccanismi di Autenticazione e Segretezza IP è quella di **Security Association** (SA), essa è una relazione mono direzionale fra un mittente ed un destinatario che vogliono comunicare in sicurezza, ogni SA è caratterizzata dai suoi parametri di sicurezza necessari per l'implementazione dei protocolli IP Sec. I parametri legati ad una SA sono diversi, i più importanti sono:
+Un concetto chiave nei meccanismi di Autenticazione e Segretezza IP è quella di **Security Association** (SA), essa è una relazione monodirezionale fra un mittente ed un destinatario che vogliono comunicare in sicurezza, ogni SA è caratterizzata dai suoi parametri di sicurezza necessari per l'implementazione dei protocolli IP Sec. I parametri legati ad una SA sono diversi, i più importanti sono:
 - **SPI** (Secure Parameter Index)
 	Stringa di bit identificativa per la SA, questo id è trasportato negli header e permette in ricezione di elaborare correttamente il pacchetto in base alle impostazioni e parametri specificati.
 - **Indirizzo IP di destinazione**

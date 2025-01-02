@@ -57,7 +57,7 @@ $X \ll W \gg$ | $W \ll V \gg$ | $V \ll Y \gg$ | $Y \ll Z \gg$ | $Z \ll B \gg$
 
 In questo caso abbiamo fatto utilizzo di due tipi di certificati:
 - Certificati in avanti, qualsiasi certificato emesso da una CA per un nodo più esterno alla gerarchia (Es. $Z \ll B \gg$ )
-- Certificati all'indietro, qualsiasi certificato che permette di risalire la gerarchia, (Es. $X \ll W \gg$)
+- Certificati all'indietro, qualsiasi certificato che permette di risalire la gerarchia,(Es. $X \ll W \gg$)
 
 
 ### Revocazione 
