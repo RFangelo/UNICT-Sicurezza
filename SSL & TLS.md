@@ -35,15 +35,13 @@ Questo protocollo fornisce i servizi di sicurezza di base per i protocolli di li
 - **Riservatezza**: Il protocollo di Handshake fornisce due chiavi simmetriche condivise, una per ogni direzione ( client -> server, server -> client). Tramite queste chiavi avviene la cifratura.
 - **Integrità**: Il protocollo di handshake fornisce pure due chiavi simmetriche per la generazione di MAC per la verifica dell'integrità.
 
-Dato un messaggio da trasmettere i passi operativi sono frammentazione in più blocchi da 16 KB, compressione (opzionale), aggiunta del MAC, cifratura e aggiunta header SSL.
+Dato un messaggio da trasmettere i passi operativi sono frammentazione in più blocchi, compressione (opzionale), aggiunta del MAC, cifratura e aggiunta header SSL.
 La compressione deve fornire un blocco di lunghezza inferiore o al peggio non maggiore di 1024 byte.
 
 ![[Pasted image 20241207180834.png]]
 
 ![[Pasted image 20241207181234.png]]
 
-**Content type, Maj version, Min version = 1 Byte**
-**Compressed Length = 2 Byte**
 
 #### SSL Change Spec Protocol
 Questo protocollo è uno dei tre che utilizza Record SSL, ed è il più semplice.
@@ -106,7 +104,6 @@ Questo protocollo viene utilizzato prima della trasmissione di tutti i dati del 
 	 - Nella prima fase vengono scambiati due random client/server
 	 - Nella seconda fase e terza viene generato una pre-master key, utilizzando DiffieHellman o RSA (in questo caso la pre-master viene scelta dal client e inviata al server cifrata con la sua chiave publica)
 	 - Viene generata la Master-Key attraverso una funzione di generazione, questa prende in ingresso pre-master ed i due valori random della prima fase.
-	 - Per ogni nuova connessione le chiavi simmetriche vengono generate a partire dal Master Secret e dai nuovi random client e server.
 	
 
 ### TLS

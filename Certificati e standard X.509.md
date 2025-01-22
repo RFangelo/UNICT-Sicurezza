@@ -59,12 +59,6 @@ In questo caso abbiamo fatto utilizzo di due tipi di certificati:
 - Certificati in avanti, qualsiasi certificato emesso da una CA per un nodo più esterno alla gerarchia (Es. $Z \ll B \gg$ )
 - Certificati all'indietro, qualsiasi certificato che permette di risalire la gerarchia,(Es. $X \ll W \gg$)
 
-Quindi operativamente:
-- Ottengo il certificato $Z \ll B \gg$
-- Ottengo il certificato $Y \ll Z \gg$
-- Verifico il primo usando la chiave publica del secondo
-- Adesso il certificato target da verificare diventa $Y \ll Z \gg$
-- In modo iterativo ottengo il certificato dell issuer e verifico fino a raggiungere la mia CA.
 
 ### Revocazione 
 Uno dei campi del certificato X.509 è il periodo di validità oltre il quale non potrà essere utilizzato. Possono nascere diverse situazioni in cui è necessario rendere un certificato non più utilizzabile, ad esempio se viene violata la chiave privata dell'utente o la chiave della CA utilizzata per la firma. Nasce quindi l'esigenza di implementare un metodo di revoca dei certificati già emessi, nelle implementazioni più comuni questo viene effettuato attraverso la definizione di liste di certificati revocati, detti anche Certificate Revocation List (**CRL**), queste vengono prodotte periodicamente dalla CA e sono una lista di tutti i SN associati ai certificati ormai revocati.

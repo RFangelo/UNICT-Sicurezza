@@ -77,7 +77,7 @@ I campi dell'header ESP sono:
 - **Security Parameter Index**
 - **Sequence Number**
 - **Payload Data** In ESP il payload insieme al padding hanno una dimensione variabile, l'utilizzo del padding permette di ottenere una dimensione del blocco da cifrare compatibile con l'algoritmo di cifratura, inoltre permette di celare informazioni relative alla dimensione effettiva del dato e rendere più difficile l'analisi del traffico.
-- **Padding** Ha dimensione variabile, la sua dimensione dipende strettamente dal payload, inoltre deve terminare con il secondo ottetto di una parola di 4 byte (vedi figura). Può avere una dimensione massima di 255 byte, in questo modo è possibile celare la dimensione effettiva dei pacchetti ed impedire l’analisi del traffico.
+- **Padding** Ha dimensione variabile, la sua dimensione dipende strettamente dal payload, inoltre deve terminare con il secondo ottetto di una parola di 4 byte (vedi figura). Può avere una dimensione massima di 255 byte, in questo modo è possibile celare la dimensione effettiva dei pacchetti ed impedire l’analisi del traffico. Un ulteriore utilità data dal padding è quella di rendere il plaintext di una determinata dimensione per essere dato in ingresso ad uno schema di cifratura.
 - **Pad Length** Specifica la dimensione del padding.
 - **Next Header** Specifica il tipo di contenuto in Payload Data.
 - **Authentication Data** Campo opzionale e di dimensione variabile (deve essere comunque una dimensione multipla di 32), contiene un integrity check value calcolato su tutti i campi meno Authentication Data.
